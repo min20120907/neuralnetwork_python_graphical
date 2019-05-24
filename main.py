@@ -1,6 +1,6 @@
 import numpy as np
-import time as time
 import matplotlib.pyplot as plt
+import deep_learning
 lista = [] 
 listb = []
 listc = []
@@ -31,7 +31,7 @@ X = np.array([[0,0,1],
             [1,1,1],
             [0,0,1],
             [1,1,0],
-            [0,0,1],
+            [0,0,1]
             ])
 
 #output data
@@ -66,7 +66,7 @@ XA = np.array([[0,0,1],
             [1,1,1],
             [0,0,1],
             [1,1,1],
-            [0,1,1],
+            [0,1,1]
             ])
 
 #output data
@@ -139,6 +139,7 @@ for j in xrange(times*10000):
 plt.ylim(0,1)
 plt.xlim(0,times*10000)
 plt.show()
+
 
 
 print "Output after training"
