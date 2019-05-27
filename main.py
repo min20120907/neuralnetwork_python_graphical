@@ -94,7 +94,7 @@ syn0 = 2*np.random.random((3,16)) - 1
 syn1 = 2*np.random.random((16,1)) - 1
 syn0A = 2*np.random.random((3,16)) - 1
 syn1A = 2*np.random.random((16,1)) - 1
-begin = time.time()
+
 times = 25
 
 for j in xrange(times*10000):
@@ -131,9 +131,6 @@ for j in xrange(times*10000):
             lista.append(float(np.mean(l2A)))
             listc.append(j)
     if(j%10000) == 0:
-        
-        end = time.time()
-        dur = end - begin
         plt.plot(listc,listb,color="red",linewidth=1,label="l2")
         plt.plot(listc,lista,color="blue",linewidth=1,label="l2A",linestyle="--")
 plt.ylim(0,1)

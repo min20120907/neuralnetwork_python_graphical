@@ -1,6 +1,12 @@
 import numpy as np
 class deeplearning():
     def __init__(self,X,y,syn0,syn1,times=6,interval_dur=10000):
+        #Proclaim the binary to decimal function
+        def bin2deci(listA):
+            a=0.0
+            for i in xrange(len(listA)):
+                    a += listA[i]*2**i
+            return a
         #Proclaim the Sigmoid function and Derivation function
         def nonlin(x,deriv=False):
             if(deriv==True):
@@ -27,5 +33,5 @@ class deeplearning():
             syn0 += l0.T.dot(l1_delta)
             if(j%100) == 0:
                 #Updating the data lists(time,trained output)
-                self.lista.append(np.mean(j))
-                self.listb.append(np.mean(l2))
+                self.lista.append(j)
+                self.listb.append(bin2deci(l2))
