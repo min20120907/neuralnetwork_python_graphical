@@ -14,6 +14,9 @@ class deeplearning():
             return 1/(1+np.exp(-x))
         self.lista = []
         self.listb = []
+        self.listc = []
+        self.listd = []
+        self.liste = []
         #Traing Steps
         for j in xrange(times*10000):
             #Put input data inside
@@ -34,4 +37,7 @@ class deeplearning():
             if(j%100) == 0:
                 #Updating the data lists(time,trained output)
                 self.lista.append(j)
-                self.listb.append(bin2deci(l2))
+                self.listb.append(l2[0][0])
+                self.listc.append(l2[1][0])
+                self.listd.append(l2[2][0])
+                self.liste.append(l2[3][0])
